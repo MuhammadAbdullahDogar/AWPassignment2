@@ -5,13 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url('css/globalCss.css') }}">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica;
-        }
-
         header li {
             list-style: none;
             display: inline-block;
@@ -39,12 +34,14 @@
 
         header a {
             text-decoration: none;
-            color: #555;
+            color: black;
             transition: all 0.3s ease 0s;
+            cursor: pointer;
         }
 
         header a:hover {
-            color: #b2dfdb;
+            color: gray;
+            font-weight: 600;
         }
 
         header button {
@@ -53,23 +50,23 @@
             border: 1px solid black;
         }
     </style>
-    <title>Document</title>
 </head>
 
 <body>
     <header>
-        <h1 id="nav-title">Shoping Online</h1>
-
+        <h1 id="nav-title">Construction Company</h1>
         <nav>
             <ul>
-                <li>
-                    <a>Add Project</a>
-                </li>
-                <li>
-                    <a>View Project Details</a>
-                </li>
+                <li><a href="../company">Add Project Type</a></li>
+                <li><a href="../view-Data">View Project Types</a></li>
+                <li><a href="../createProject">Add Project</a></li>
+                <li><a href="../view-project">View Project</a></li>
             </ul>
         </nav>
+    </header>
 </body>
+<div class="container">
+    @yield('content')
+</div>
 
 </html>

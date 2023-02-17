@@ -15,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 Route::get('company', [ProjectTypeController::class, 'create']);
 Route::get('construction-Ptype', [ProjectTypeController::class, 'store']);
 Route::get('view-Data', [ProjectTypeController::class, 'show']);

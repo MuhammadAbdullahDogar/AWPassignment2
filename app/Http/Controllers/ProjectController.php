@@ -70,6 +70,7 @@ class ProjectController extends Controller
         $data=app('App\Http\Controllers\ProjectTypeController')->index();
         return view('editProject', compact('project','data'));
     }
+   
 
     /**
      * Update the specified resource in storage.
